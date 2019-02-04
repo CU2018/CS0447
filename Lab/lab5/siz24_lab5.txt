@@ -1,0 +1,42 @@
+1. 
+	4 bits: [0, 15]
+	8 bits: [0,255]
+	11 bits: [0, 2047]
+2.
+	4 bits: [-8, 7]
+	8 bits: [-128,127]
+	11 bits: [-1024, 1023]
+3.	
+	13: 1101
+	58: 111010B / 0011 1010
+	141: 1000 1101
+4.
+	01001001: 73
+	00011001: 25
+	10000000: 128
+5.
+	01001001: 73
+	11111001: -7
+	10000000: -128
+6.
+	01001001: 00000000 01001001
+	11111001: 11111111 11111001
+	10000000: 11111111 10000000
+7.
+	~00111001: 11000110
+	11100110&01110001: 01100000
+	11100110|01110001: 11110111
+8.
+	little-endian integers: AD DE 15 E3 (lower addr->higher)
+	big-endian integers: E3 15 DE AD (lower addr->higher)
+9. 
+	16*7 = 112 Bytes
+10. 
+	44 in register t3 is copied into the address stored in register a1 in the memory.
+11. 
+	We could use lbu for unsigned bytes (like a zero extension) and lb for signed bytes (like the signed extension); 
+	we do this because we have to preserve the original bytes in the memory.
+12. 
+	+1000111010: 0x440E8000
+	-1000111010: 0xC40E8000
+	+1: 0x3F800000
